@@ -1,0 +1,18 @@
+{
+  "name": "waflow-backend",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "services/*"
+  ],
+  "scripts": {
+    "dev": "echo 'Run individual services with npm run dev inside each service folder'",
+    "lint": "eslint . || true",
+    "format": "prettier --write .",
+    "test": "echo 'Add root-level tests later'"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "prettier": "^3.3.3"
+  }
+}
