@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const companySchema = new mongoose.Schema(
   {
@@ -9,4 +9,4 @@ const companySchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-export default mongoose.model("Company", companySchema);
+export default mongoose.model('Company', companySchema);
