@@ -1,11 +1,11 @@
-import express from "express";
+import express from 'express';
 import {
   login,
   firstLoginChangePassword,
   forgotPassword,
   resetPassword,
   logout,
-} from "../controllers/authController.js";
+} from '../controllers/authController.js';
 
 const router = express.Router();
 
@@ -21,7 +21,7 @@ const router = express.Router();
  *   portal: 'manager-agent' | 'customer'
  * }
  */
-router.post("/login", login);
+router.post('/login', login);
 
 /**
  * First login password change (temporary password)
@@ -32,7 +32,7 @@ router.post("/login", login);
  *   newPassword: string
  * }
  */
-router.post("/first-login", firstLoginChangePassword);
+router.post('/first-login', firstLoginChangePassword);
 
 /**
  * Forgot password
@@ -42,7 +42,7 @@ router.post("/first-login", firstLoginChangePassword);
  * }
  * Response always generic
  */
-router.post("/forgot-password", forgotPassword);
+router.post('/forgot-password', forgotPassword);
 
 /**
  * Reset password
@@ -52,12 +52,12 @@ router.post("/forgot-password", forgotPassword);
  *   newPassword: string
  * }
  */
-router.post("/reset-password", resetPassword);
+router.post('/reset-password', resetPassword);
 
 /**
  * Logout
  * Frontend can optionally send userId for future audit logging
  */
-router.post("/logout", logout);
+router.post('/logout', logout);
 
 export default router;

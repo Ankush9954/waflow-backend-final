@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const managerSchema = new mongoose.Schema({
   managerId: { type: String, unique: true }, // e.g. MGR-0001
@@ -7,8 +7,8 @@ const managerSchema = new mongoose.Schema({
   email: { type: String, required: true },
   phoneNumber: { type: String },
   company: { type: String }, // lowercase for consistency
-  status: { type: String, enum: ["active", "inactive"], default: "active" },
-  role: { type: String, default: "manager" },
+  status: { type: String, enum: ['active', 'inactive'], default: 'active' },
+  role: { type: String, default: 'manager' },
 
   // Audit fields
   createdBy: { type: String },
@@ -17,4 +17,4 @@ const managerSchema = new mongoose.Schema({
   updatedAt: { type: Date, default: Date.now },
 });
 
-export default mongoose.model("Manager", managerSchema);
+export default mongoose.model('Manager', managerSchema);

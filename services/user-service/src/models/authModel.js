@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const authSchema = new mongoose.Schema(
   {
@@ -12,12 +12,12 @@ const authSchema = new mongoose.Schema(
     password: { type: String, required: true },
     role: {
       type: String,
-      enum: ["manager", "agent", "customer"],
+      enum: ['manager', 'agent', 'customer'],
       required: true,
     },
     tenantId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Company",
+      ref: 'Company',
       required: true,
     },
     isActive: { type: Boolean, default: true },
@@ -28,4 +28,4 @@ const authSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Auth", authSchema);
+export default mongoose.model('Auth', authSchema);
